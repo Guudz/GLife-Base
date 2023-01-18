@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - YouTube Search App</title>
+  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css'>
+<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.20/jquery.fancybox.min.css'><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<nav class="navbar navbar-light bg-faded">
+	<div class="row">
+		 <div class="col-sm-3">
+  			<h1 class="logo" ><i class="fa fa-youtube yt"></i><span>Vidz</span></h1>
+         </div>
+		<div class="col-sm-9">
+        	
+        	 <form class="form-inline " style="margin-top:5px;" id="search-form" name="search-form" onSubmit="return search()">
+             		<table width="100%">
+                    	<tr>
+                        	<td width="100%">
+                            	<div class="d3 float-right" style="width:100%;" >	
+                                  <input class="form-control search-field" type="search" id="query" style="width:100%;"  placeholder="Search Youtube">
+                                  <span class="focus-border">
+                                            <i></i>
+                                        </span>
+                                    </div>
+                            </td>
+                            <td>
+                            	  <button class="btn btn-outline-danger my-2 my-sm-0 " type="submit" id="search-btn"  name="search-btn" value="">Search</button>
+                            </td>
+    				</tr>                
+	              </table>  
+                </form>
+        </div>
+    </div>
+ 
+</nav>
+
+
+<div class="content">
+<div class="container-fluid" id="results">
+	
+	
+        		
+    
+</div> <!-- ENd of container fluid -->
+<div class="container-fluid">
+	<div class="row">
+    	<div class="col-sm-12">    <div id="btn-cnt"></div> </div>
+    </div>
+</div>
+</div> <!-- End of content -->
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/js/bootstrap.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.20/jquery.fancybox.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>

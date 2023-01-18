@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
+	<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css'>
+	<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'>
+	<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.20/jquery.fancybox.min.css'><link rel="stylesheet" href="main.css">
+	<script src="main.js" type="text/javascript"></script>
+	<script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+</head>
+
+<body>
+	<div id="yttt">
+		<nav class="navbar navbar-light bg-faded">
+			<div class="row">
+				<div class="col-sm-3">
+					<h1 class="logo" ><i class="fa fa-youtube yt"></i><span>LS</span></h1>
+				</div>
+				<div class="col-sm-9">
+					
+					<form class="form-inline " style="margin-top:5px;" id="search-form" name="search-form" onSubmit="return search()">
+							<table width="100%">
+								<tr>
+									<td width="100%">
+										<div class="d3 float-right" style="width:100%;" >	
+										<input class="form-control search-field" type="search" id="query" style="width:100%;"  placeholder="Search Youtube">
+										<span class="focus-border">
+													<i></i>
+												</span>
+											</div>
+									</td>
+									<td>
+										<button class="btn btn-outline-danger my-2 my-sm-0 " type="submit" id="search-btn"  name="search-btn" value="">Search</button>
+									</td>
+							</tr>                
+						</table>  
+						</form>
+				</div>
+			</div>
+		
+		</nav>
+		
+		
+		<div class="content">
+		<div class="container-fluid" id="results">
+			
+			
+						
+			
+		</div> <!-- ENd of container fluid -->
+		<div class="container-fluid">
+			<div class="row">
+				<script>
+					function t() {
+						fetch(`https://${GetParentResourceName()}/exit`, {
+							method: 'POST',
+							headers: {
+								'Content-Type': 'application/json; charset=UTF-8',
+							},
+						}).then(resp => resp.json()).then(resp => console.log(resp));
+					}
+				</script>
+				<div class="col-sm-12">    <div id="btn-cnt"></div> </div>
+				<button onclick="t()" class="btn btn-outline-danger my-2 my-sm-0 exit " value="">Exit</button>
+			</div>
+		</div>
+		</div> <!-- End of content -->
+	</div>
+</body>
+
+</html>

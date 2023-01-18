@@ -1,0 +1,59 @@
+{
+  "name": "uuid-with-v6",
+  "version": "1.1.2",
+  "description": "UUID Version 6",
+  "main": "index.js",
+  "scripts": {
+    "benchmark": "matcha --reporter plain",
+    "coveralls": "istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly ./test/unit -- --recursive -R spec && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
+    "coverage": "./node_modules/istanbul/lib/cli.js cover --report=json-summary --report=html _mocha ./test/unit -- --recursive",
+    "test": "node node_modules/mocha/bin/mocha ./test --recursive",
+    "test-unit": "node node_modules/mocha/bin/mocha ./test/unit --recursive"
+  },
+  "engines": {
+    "node": ">4.x"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kurttheviking/uuid-with-v6-js.git"
+  },
+  "keywords": [
+    "uuid",
+    "uuid-v6",
+    "uuid6",
+    "guid",
+    "rfc4122"
+  ],
+  "author": {
+    "name": "Kurt Ericson",
+    "email": "github@kurttheviking.com",
+    "url": "https://github.com/kurttheviking"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kurttheviking/uuid-with-v6-js/issues"
+  },
+  "homepage": "https://github.com/kurttheviking/uuid-with-v6-js#readme",
+  "dependencies": {
+    "uuid": "3.1.0"
+  },
+  "devDependencies": {
+    "chai": "3.5.0",
+    "coveralls": "2.12.0",
+    "eslint": "3.9.1",
+    "eslint-config-airbnb-base": "10.0.1",
+    "eslint-plugin-import": "2.2.0",
+    "flake-idgen": "1.1.0",
+    "istanbul": "0.4.5",
+    "matcha": "0.7.0",
+    "mocha": "3.1.2",
+    "mocha-eslint": "3.0.1",
+    "mockery": "2.0.0",
+    "puid": "1.0.7",
+    "scuid": "1.0.1",
+    "shortid": "2.2.8",
+    "sinon": "1.17.7",
+    "ulid": "0.1.0",
+    "uniqid": "4.1.1"
+  }
+}
